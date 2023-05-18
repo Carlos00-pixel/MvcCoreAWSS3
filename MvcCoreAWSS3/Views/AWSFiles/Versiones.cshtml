@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Amazon.S3.Model.S3ObjectVersion>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Versión</th>
+            <th>Última modificación</th>
+            <th>Tamaño</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var version in Model)
+        {
+            <tr>
+                <td>@version.VersionId</td>
+                <td>@version.LastModified</td>
+                <td>@version.Size</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
